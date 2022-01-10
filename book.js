@@ -13,7 +13,7 @@ function getBookIdParam() {
 }
 
 async function getBooksFromJson() {
-    const response = await fetch('https://alexandrinasobol.github.io/bookStore/data/books.json');
+    const response = await fetch('https://alexandrinasobol.github.io/StoreBook/data/books.json');
     return response.json()
 }
 
