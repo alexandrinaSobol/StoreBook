@@ -19,7 +19,6 @@ async function getBooksFromJson() {
 
 const addBookToOrderTable = (bookId) => {
     const selectedBook = availableBooks.filter(book => book.id === bookId);
-
     selectedBook[0].count = 1;
     let orderBooks = getBooksFromLocalStorage();
     if (orderBooks === null) {
@@ -87,7 +86,8 @@ function reloadOrderCart(){
     calculateItemFromCart();
     calculateTotalFromOrder();
 }
-function calculateItemFromCart() {
+
+function calculateItemFromCart(){
     let orderBooks = getBooksFromLocalStorage();
     let sum = orderBooks.reduce((sum, {count}) => sum + count, 0)
     booksInCart.innerHTML = `${sum}`

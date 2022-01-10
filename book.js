@@ -50,7 +50,7 @@ function addBookToOrderTable(bookId) {
     calculateItemFromCart();
 }
 
-function calculateItemFromCart() {
+function calculateItemFromCart(){
     let orderBooks = getBooksFromLocalStorage();
     let sum = orderBooks.reduce((sum, {count}) => sum + count, 0)
     booksInCart.innerHTML = `${sum}`
@@ -65,7 +65,7 @@ function getShelfBookContent(book) {
     return `
 <div class="single-book-item">
     <div class="book-item-cover">
-        <img src=${book.img} alt="pic" class="book-img">
+       <img src=${book.img} alt="pic" class="book-img">
     </div>
     <div class="book-item-info">
         <ul class="book-item-list">
